@@ -8,10 +8,7 @@
 #ifndef UNITTESTS_HPP_
 # define UNITTESTS_HPP_
 
-# include <iostream>
-# include <fstream>
 # include <cstdlib>
-# include <cstdio>
 
 class UnitTests {
  public:
