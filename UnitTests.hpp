@@ -39,10 +39,10 @@ class UnitTests {
 		* Verify if given paremeters are equals (usable with numbers and strings only)
 		*
 		* @param T const &firstArg The first template value
-		* @param T const &secondArg The second template value
+		* @param U const &secondArg The second template value
 	**/
-	template <typename T>
-	static bool isEqual(T const &firstArg, T const &secondArg) {
+	template <typename T, typename U>
+	static bool isEqual(T const &firstArg, U const &secondArg) {
 		if (firstArg == secondArg) {
 			return true;
 		} else {
@@ -54,10 +54,10 @@ class UnitTests {
 		* Verify if given parameters are not equals (usable with numbers and strings only)
 		*
 		* @param T const &firstArg The first template value
-		* @param T const &secondArg The second template value
+		* @param U const &secondArg The second template value
 	**/
-	template <typename T>
-	static bool isNotEqual(T const &firstArg, T const &secondArg) {
+	template <typename T, typename U>
+	static bool isNotEqual(T const &firstArg, U const &secondArg) {
 		if (firstArg != secondArg) {
 			return true;
 		} else {
@@ -69,10 +69,10 @@ class UnitTests {
 		* Verify if first argument is greater than the second argument (usable with numbers)
 		*
 		* @param T const &greater The first template value supposed to be greater
-		* @param T const &lower The second template value supposed to be lower
+		* @param U const &lower The second template value supposed to be lower
 	**/
-	template <typename T>
-	static bool isGreaterThan(T const &greater, T const &lower) {
+	template <typename T, typename U>
+	static bool isGreaterThan(T const &greater, U const &lower) {
 		if (greater > lower) {
 			return true;
 		} else {
@@ -84,10 +84,10 @@ class UnitTests {
 		* Verify if first argument is greater than or equal the second argument (usable with numbers)
 		*
 		* @param T const &greater The first template value supposed to be greater or equal
-		* @param T const &lower The second template value supposed to be lower or equal
+		* @param U const &lower The second template value supposed to be lower or equal
 	**/
-	template <typename T>
-	static bool isGreaterThanOrEqual(T const &greater, T const &lower) {
+	template <typename T, typename U>
+	static bool isGreaterThanOrEqual(T const &greater, U const &lower) {
 		if (greater >= lower) {
 			return true;
 		} else {
@@ -99,10 +99,10 @@ class UnitTests {
 		* Verify if first argument is lower than the second argument (usable with numbers)
 		*
 		* @param T const &lower The first template value supposed to be lower
-		* @param T const &greater The second template value supposed to be greater
+		* @param U const &greater The second template value supposed to be greater
 	**/
-	template <typename T>
-	static bool isLowerThan(T const &lower, T const &greater) {
+	template <typename T, typename U>
+	static bool isLowerThan(T const &lower, U const &greater) {
 		if (lower < greater) {
 			return true;
 		} else {
@@ -114,10 +114,10 @@ class UnitTests {
 		* Verify if first argument is lower than or equal the second argument (usable with numbers)
 		*
 		* @param T const &lower The first template value supposed to be lower or equal
-		* @param T const &greater The second template value supposed to be greater or equal
+		* @param U const &greater The second template value supposed to be greater or equal
 	**/
-	template <typename T>
-	static bool isLowerThanOrEqual(T const &lower, T const &greater) {
+	template <typename T, typename U>
+	static bool isLowerThanOrEqual(T const &lower, U const &greater) {
 		if (lower <= greater) {
 			return true;
 		} else {
@@ -132,7 +132,7 @@ class UnitTests {
 	**/
 	template <typename T>
 	static bool isEmpty(T const &empty) {
-		if (empty == NULL or empty->size() == 0) {
+		if (empty == NULL or empty.length() == 0) {
 			return true;
 		} else {
 			return false;
