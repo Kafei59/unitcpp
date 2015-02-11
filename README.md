@@ -1,2 +1,3 @@
 # unitcpp
-UnitTests C++
+
+UnitTests class in C++
