@@ -8,6 +8,7 @@
 #ifndef UNITTESTS_HPP_
 # define UNITTESTS_HPP_
 
+# include <iostream>
 # include <cstdlib>
 
 class UnitTests {
@@ -132,7 +133,7 @@ class UnitTests {
 	**/
 	template <typename T>
 	static bool isEmpty(T const &empty) {
-		if (empty == NULL or empty.length() == 0) {
+		if (empty == NULL or empty[0] == 0) {
 			return true;
 		} else {
 			return false;
@@ -145,9 +146,9 @@ class UnitTests {
 		* @param std::string const &string The constant reference string value
 		* @param std::string const *arrayString The array of constant referance string to look for
 	**/
-	static bool isContaining(std::string const &, std::string const *) {
+	static bool isContaining(std::string const &searchString, std::string const *arrayString) {
 		for (size_t i = 0; i < arrayString->size(); i++) {
-			if (string == arrayString[i]) {
+			if (searchString == arrayString[i]) {
 				return true;
 			}
 		}
@@ -161,7 +162,7 @@ class UnitTests {
 		* @param T const &file The filename to test if exists
 	**/
 	template <typename T>
-	static bool fileExists(T const &) {
+	static bool fileExists(T const &file) {
 		if (file) {
 			return true;
 		} else {

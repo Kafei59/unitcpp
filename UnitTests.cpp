@@ -2,7 +2,7 @@
 * @Author: gicque_p
 * @Date:   2015-02-11 19:17:13
 * @Last Modified by:   gicque_p
-* @Last Modified time: 2015-02-11 19:31:27
+* @Last Modified time: 2015-02-11 19:39:13
 */
 
 #include <fstream>
@@ -66,7 +66,7 @@ int main() {
 		printError("isContaining method is not working");
 	}
 
-	ofstream file("UnitTests.hpp");
+	ifstream file("UnitTests.hpp");
 	if (UnitTests::fileExists(file) == false) {
 		printError("fileExists method is not working");
 	}
